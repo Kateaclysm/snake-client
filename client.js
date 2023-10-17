@@ -9,7 +9,8 @@ const connect = function () {
   });
   conn.on('connect', () => {
     console.log("Connection established!");
-  })
+    conn.write("Name: KTE");
+  });
   conn.on("data", (data) => {
     console.log(data);
   });
