@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Controls:
 **W, A, S, D** move the snake one position **Up, Left, Down, Right**, respectively.
-
+**B, X, Z** produce a short, canned message above your Snake.
 **Ctrl + C** will terminate connection with the server and "end" the game immediately. 
 
 
