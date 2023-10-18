@@ -18,6 +18,15 @@ const handleUserInput = (data) => {
   if (data === 'd') {
     connection.write("Move: right");
   }
+  if (data === 'b') {
+    connection.write("Say: Better watch out!");
+  }
+  if (data === 'z') {
+    connection.write("Say: I'm logging out!");
+  }
+  if (data === 'x') {
+    connection.write("Say: Last round!");
+  }
 };
 const setupInput = (conn) => {
   connection = conn;
