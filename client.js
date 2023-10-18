@@ -1,5 +1,5 @@
 const net = require("net");
-const { stdin } = require("process");
+const { stdin, send } = require("process");
 
 // establishes a connection with the game server
 const connect = function () {
@@ -11,15 +11,13 @@ const connect = function () {
     console.log("Connection established!");
     conn.write("Name: KTE");
   });
+  // interpret incoming data as text
+  conn.setEncoding("utf8");
   conn.on("data", (data) => {
     console.log(data);
   });
-  
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
   return conn;
 };
-console.log("Connecting ...");
-connect();
 
-module.exports = connect;
+
+module.exports = { connect }

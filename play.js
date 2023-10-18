@@ -1,16 +1,6 @@
-const connect = require('./client.js');
+const { connect } = require("./client");
+const { setupInput } = require("./input");
+console.log("Connecting ...");
 
-// setup interface to handle user input from stdin
-const handleUserInput = function () {
-  if (data = '\u0003') {
-    process.exit();
-  }
-};
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-  stdin.on("data", handleUserInput);
-  return stdin;
-};
+const conn = connect();
+setupInput(conn);
